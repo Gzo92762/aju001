@@ -38,7 +38,7 @@ fs.readdirSync('./plugins/sql/').forEach(plugin => {
 
 const plugindb = require('./plugins/sql/plugin');
 
-// Yalnızca bir kolaylık. https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function //
+// Yaln��zca bir kolayl��k. https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function //
 String.prototype.format = function () {
     var i = 0, args = arguments;
     return this.replace(/{}/g, function () {
@@ -86,7 +86,7 @@ async function whatsAsena () {
 
     conn.on ('credentials-updated', async () => {
         console.log(
-            chalk.blueBright.italic('✅ Login information updated!')
+            chalk.blueBright.italic('��� Login information updated!')
         );
 
         const authInfo = conn.base64EncodedAuthInfo();
@@ -101,17 +101,17 @@ async function whatsAsena () {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
-${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
+${chalk.blue.italic('������ Connecting to WhatsApp...')}`);
     });
     
 
     conn.on('open', async () => {
         console.log(
-            chalk.green.bold('✅ Login successful!')
+            chalk.green.bold('��� Login successful!')
         );
 
         console.log(
-            chalk.blueBright.italic('⬇️ Installing external plugins...')
+            chalk.blueBright.italic('������ Installing external plugins...')
         );
 
         var plugins = await plugindb.PluginDB.findAll();
@@ -127,7 +127,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         });
 
         console.log(
-            chalk.blueBright.italic('⬇️Installing plugins...')
+            chalk.blueBright.italic('������Installing plugins...')
         );
 
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -137,7 +137,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         });
 
         console.log(
-            chalk.green.bold('✅ Ajuser bot working aan😎!')
+            chalk.green.bold('��� Gzo92762 bot working aan����!')
         );
         await new Promise(r => setTimeout(r, 1100));
 
@@ -146,11 +146,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
 
                 if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Tespit Edildi!``` \n```Kullanıcı:``` \n```Sebep:``` ', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```������� Blacklist Tespit Edildi!``` \n```Kullan��c��:``` \n```Sebep:``` ', MessageType.text)
 
                     await new Promise(r => setTimeout(r, 1700));
 
-                    console.log('🛡️ Blacklist Detected 🛡️')
+                    console.log('������� Blacklist Detected �������')
 
                     await heroku.get(baseURI + '/formation').then(async (formation) => {
                         forID = formation[0].id;
@@ -162,18 +162,18 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                     })
                 }
                 else {
-                    await conn.sendMessage(conn.user.jid, '*AJUSER BOT WORKING AYI😜*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*Gzo92762 BOT WORKING AYI����*', MessageType.text);
                 }
             }
             else {
 
                 if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```������� Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
 
                     await new Promise(r => setTimeout(r, 1800));
 
-                    console.log('🛡️ Blacklist Detected 🛡️')
+                    console.log('������� Blacklist Detected �������')
                     await heroku.get(baseURI + '/formation').then(async (formation) => {
                         forID = formation[0].id;
                         await heroku.patch(baseURI + '/formation/' + forID, {
@@ -184,7 +184,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                     })
                 }
                 else {
-                    await conn.sendMessage(conn.user.jid, '*AJUSER BOT WORKING AYI😜*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*Gzo92762 BOT WORKING AYI����*', MessageType.text);
                 }
 
             }
@@ -194,11 +194,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
 
                 if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n ```Kullanıcı:``` \n```Sebep:``` ', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```������� Blacklist Detected!``` \n ```Kullan��c��:``` \n```Sebep:``` ', MessageType.text)
 
                     await new Promise(r => setTimeout(r, 1800));
 
-                    console.log('🛡️ Blacklist Detected 🛡️')
+                    console.log('������� Blacklist Detected �������')
                     await heroku.get(baseURI + '/formation').then(async (formation) => {
                         forID = formation[0].id;
                         await heroku.patch(baseURI + '/formation/' + forID, {
@@ -217,11 +217,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
 
                 if (conn.user.jid === '@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```������� Blacklist Detected!``` \n```User:```  \n```Reason:``` ', MessageType.text)
    
                     await new Promise(r => setTimeout(r, 1800));
 
-                    console.log('🛡️ Blacklist Detected 🛡️')
+                    console.log('������� Blacklist Detected �������')
                     await heroku.get(baseURI + '/formation').then(async (formation) => {
                         forID = formation[0].id;
                         await heroku.patch(baseURI + '/formation/' + forID, {
@@ -233,12 +233,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                 }
                 else {
 
-                    await conn.sendMessage(conn.user.jid, '*AJUSER BOT WORKING AYI😜*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*Gzo92762 BOT WORKING AYI����*', MessageType.text);
                 }
             }
         }
         else {
-            return console.log('Wrong WORK_TYPE key! Please use “private” or “public”')
+            return console.log('Wrong WORK_TYPE key! Please use ���private��� or ���public���')
         }
     });
 
@@ -330,14 +330,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
 
                 if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo')
                     && msg.message && msg.message.imageMessage !== null && 
-                    (command.pattern === undefined || (command.pattern !== undefined && 
-                        command.pattern.test(text_msg)))) || 
+                    (command.pattern === undefined ||��(command.pattern !== undefined && 
+                        command.pattern.test(text_msg)))) ||��
                     (command.pattern !== undefined && command.pattern.test(text_msg)) || 
                     (command.on !== undefined && command.on === 'text' && text_msg) ||
                     // Video
                     (command.on !== undefined && (command.on === 'video')
                     && msg.message && msg.message.videoMessage !== null && 
-                    (command.pattern === undefined || (command.pattern !== undefined && 
+                    (command.pattern === undefined ||��(command.pattern !== undefined && 
                         command.pattern.test(text_msg))))) {
 
                     let sendMsg = false;
@@ -345,14 +345,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                         
                     if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                    ) || command.fromMe === msg.key.fromMe ||��(command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
                     if ((config.YAK !== false && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && config.YAK.includes(',') ? config.YAK.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.YAK || config.YAK.includes(',') ? config.YAK.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.YAK)
-                    ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
+                    ) || command.fromMe === msg.key.fromMe ||��(command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
@@ -384,15 +384,15 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
                         } catch (error) {
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
                                 await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [WHATSASENA] --' + 
-                                    '\n*WhatsAsena bir hata gerçekleşti!*'+
-                                    '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
-                                    '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
-                                    '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._\n\n' +
-                                    'Gerçekleşen Hata: ' + error + '\n\n'
+                                    '\n*WhatsAsena bir hata ger��ekle��ti!*'+
+                                    '\n_Bu hata logunda numaran��z veya kar���� bir taraf��n numaras�� olabilir. L��tfen buna dikkat edin!_' +
+                                    '\n_Yard��m i��in Telegram grubumuza yazabilirsiniz._' +
+                                    '\n_Bu mesaj sizin numaran��za (kaydedilen mesajlar) gitmi�� olmal��d��r._\n\n' +
+                                    'Ger��ekle��en Hata: ' + error + '\n\n'
                                     , MessageType.text);
                             } else {
-                                await conn.sendMessage(conn.user.jid, '*~Ajuser~*' +
-                                    '\n\n*🧞‍♂️ ' + error + '*\n\n```Report🥲 errors\njoin with \n https://chat.whatsapp.com/HebsCx7CBxMJBLqyeHemcO``` ' 
+                                await conn.sendMessage(conn.user.jid, '*~Gzo92762~*' +
+                                    '\n\n*������������� ' + error + '*\n\n```Report���� errors\njoin with \n https://chat.whatsapp.com/HebsCx7CBxMJBLqyeHemcO``` ' 
                                     , MessageType.text);
                             }
                         }
@@ -406,7 +406,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp...')}`);
         await conn.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
+            console.log(chalk.red.bold('Eski s��r��m stringiniz yenileniyor...'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await conn.connect();
